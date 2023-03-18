@@ -20,6 +20,12 @@
           >Blog</RouterLink
         >
         <RouterLink
+          to="/hello"
+          class="bg-emerald-500 text-emerald-100 px-4 py-2 rounded hover:bg-emerald-600"
+          >Not Found Pages</RouterLink
+        >
+
+        <RouterLink
           v-if="!authStore.isAuthenticated"
           to="/login"
           class="bg-emerald-500 text-emerald-100 px-4 py-2 rounded hover:bg-emerald-600"
