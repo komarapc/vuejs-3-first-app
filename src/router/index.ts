@@ -8,6 +8,11 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: NotFound
+    },
+    {
       path: '/',
       name: 'home',
       component: HomeView
@@ -32,11 +37,6 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: () => import('../views/auth/LoginView.vue')
-    },
-    {
-      path: '/:pathMatch(.*)*',
-      name: 'not-found',
-      component: NotFound
     }
   ]
 })
